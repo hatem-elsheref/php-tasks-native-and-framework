@@ -37,14 +37,12 @@ function initializingTheCart(){
 }
 
 function redirectFromHere(){
-    function redirectFromHere(){
     $path = trim($_SERVER['SCRIPT_NAME'],'/');
     $path = explode('/',$path);
     $currentFileName =  end($path);
 
     if (str_replace('.php','',$currentFileName) == pathinfo(__FILE__,PATHINFO_FILENAME))
         header('location:'.APP_URL.'index.php');
-}
 }
 
 function emptyCart(){
